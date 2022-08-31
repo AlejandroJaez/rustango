@@ -6,5 +6,5 @@ use axum::{
 
 pub fn routes()-> Router<>{
     return Router::new()
-    .nest("/", pim::routes())                  // `GET /` goes to `root`
+    .nest("/", pim::routes())
 }
