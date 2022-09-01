@@ -4,7 +4,7 @@ use axum::{
 #[path = "../apps/pim/urls.rs"] mod pim;
 
 
-pub fn routes()-> Router<>{
-    return Router::new()
-    .nest("/", pim::routes())
+pub fn routes()-> Router{
+    Router::new()
+    .merge(pim::routes())
 }

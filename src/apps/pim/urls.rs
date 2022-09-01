@@ -4,9 +4,8 @@ use axum::{
 };
 #[path = "./views.rs"] mod views;
 
+
 pub fn routes()-> Router<>{
-    return Router::new()
-    .route("/", get(views::root))                  // `GET /` goes to `root`
+    Router::new()
+    .route("/", get(views::hello))
 }
-
-
